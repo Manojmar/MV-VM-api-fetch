@@ -27,7 +27,6 @@ class MainActivity : AppCompatActivity() {
    private val outputObserver=Observer<ResponseData>{
         if(it.status_code==200)
         mainBinding.recycle.adapter= Adapter(it.data)
-       Adapter.setOnItemClickListener
        startActivity(Intent(this@MainActivity,list::class.java
        ))
     }
