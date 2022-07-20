@@ -15,7 +15,7 @@ class Authorepository {
     val responseData = MutableLiveData<ResponseData>()
     val error = MutableLiveData<String>()
 
-    val outputlist=MutableLiveData<List<User>>()
+    val outputlist=MutableLiveData<ResponseData>()
 
     fun login(email: String, pass: String) {
         val jsonObject = JsonObject()
@@ -51,7 +51,7 @@ class Authorepository {
         Api().imgcount().enqueue(object : Callback<ResponseData> {
             override fun onResponse(call: Call<ResponseData>, response: Response<ResponseData>) {
                 if(response.isSuccessful) {
-                  outputlist.value  = response.body()!!.data
+                  outputlist.value  = response.body()
                 }
             }
 

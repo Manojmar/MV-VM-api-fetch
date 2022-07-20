@@ -13,7 +13,7 @@ class Authviewmodal:ViewModel(){
     val responseData:LiveData<ResponseData> by lazy { authorepository.responseData}
     val error:LiveData<String> by lazy { authorepository.error }
 
-    val outputlist:LiveData<List<User>> by lazy { authorepository.outputlist }
+    val outputlist:LiveData<ResponseData> by lazy { authorepository.outputlist }
 
     fun login(email:String,pass:String){
      authorepository.login(email=email, pass=pass)

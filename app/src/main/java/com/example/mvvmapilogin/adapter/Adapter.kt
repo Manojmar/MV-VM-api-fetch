@@ -1,5 +1,6 @@
 package com.example.mvvmapilogin.adapter
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.ImageView
@@ -32,6 +33,7 @@ class Adapter(private var data:List<User>): RecyclerView.Adapter<Adapter.ViewHol
     }
 
     companion object{
+
         @BindingAdapter("profileImageUrl")
         @JvmStatic
         fun loadImage(view: ImageView, url: String?) {
